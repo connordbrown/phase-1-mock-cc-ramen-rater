@@ -6,7 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
 function fetchRamen() {
     fetch("http://localhost:3000/ramens")
       .then(response => response.json())
-      .then(data => displayRamenPics(data))
+      .then(data => {
+        // destructuring assignment - first element in data array
+        const [firstRamen] = data;
+        displayRamenInfo(firstRamen.name, firstRamen.restaurant, firstRamen.image, firstRamen.rating, firstRamen.comment);
+        displayRamenPics(data)}
+        )
       .then(submitNewRamen())
 }
 
