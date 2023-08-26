@@ -10,8 +10,8 @@ function fetchRamen() {
         // destructuring assignment - first element in data array
         const [firstRamen] = data;
         displayRamenInfo(firstRamen.name, firstRamen.restaurant, firstRamen.image, firstRamen.rating, firstRamen.comment);
-        displayRamenPics(data)}
-        )
+        displayRamenPics(data);
+    })
       .then(submitNewRamen())
 }
 
