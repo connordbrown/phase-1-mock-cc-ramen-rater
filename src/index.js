@@ -19,7 +19,7 @@ function fetchRamen() {
 function displayRamenPics(ramenData) {
     const ramenMenu = document.querySelector('#ramen-menu');
     ramenData.forEach(ramen => {
-        const {name, restaurant, image, rating, comment, id} = ramen;
+        const {name, restaurant, image, rating, comment} = ramen;
         const ramenPic = document.createElement('img');
             ramenPic.src = image;
             ramenPic.addEventListener('click', () => displayRamenInfo(name, restaurant, image, rating, comment))
